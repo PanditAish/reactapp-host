@@ -41,8 +41,24 @@ const Register = () => {
           body: JSON.stringify(user),
         });
 
-        const res_data = await response.json();
-        console.log("res from server", res_data.extraDetails);
+        const raw = await response.clone().text();
+        console.log("RAW RESPONSE FROM SERVER:", raw);
+
+        // ✅ JSON safe parse
+        let res_data;
+        try {
+          res_data = JSON.parse(raw);
+        } catch (err) {
+          console.error("JSON parse failed:", err);
+          toast.error("Server invalid response.");
+          return;
+        }
+
+        console.log("res from server", res_data);
+
+
+        // let res_data = await response.json();
+        // console.log("res from server", res_data.extraDetails);
 
         if(response.ok) {
            
