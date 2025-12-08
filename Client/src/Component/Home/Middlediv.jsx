@@ -19,9 +19,9 @@ const Middlediv = () => {
         </Slide>
         <Slide direction="right" duration={3000}>
         <div className="pb-5 md:py-12 px-9" style={{ "--text-color": textColor }}>
-          <Typography variant="lead" className="text-sm md:text-md mb-3 text-[var(--text-color)] transition-colors font-sans">About Us</Typography>
-          <Typography variant="h2" className="font-bold font-handwriting text-xl lg:text-3xl mb-3">Web Development Projects</Typography>
-          <Typography variant="paragraph" className="text-sm text-gray-800 leading-6 font-sans">Achieving project goals in spite of time and budget constraints, as well as changing requirements, 
+          <Typography variant="lead" className="text-center md:text-left text-sm md:text-md mb-3 text-[var(--text-color)] transition-colors font-sans">About Us</Typography>
+          <Typography variant="h2" className="text-center md:text-left font-bold font-handwriting text-xl lg:text-3xl mb-3">Web Development Projects</Typography>
+          <Typography variant="paragraph" className="text-center md:text-left text-sm text-gray-800 leading-6 font-sans">Achieving project goals in spite of time and budget constraints, as well as changing requirements, 
           is our top priority. 
           You set goals, we drive the project to fulfill them. we deliver transformative solutions that drive real results. 
           Each project highlights our strategic approach and the value we bring to clients.

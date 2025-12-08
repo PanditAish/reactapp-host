@@ -102,6 +102,7 @@ const StickyNavbar = () => {
           (
             <>
               <NavLink to="/login" className="text-center bg-gradient-to-r from-black/70 to-black/75 rounded-md py-1 px-3 text-white shadow-xl hover:bg-black/80">Login</NavLink>
+              <NavLink to="/register" className="text-center bg-gradient-to-r from-black/70 to-black/75 rounded-md py-1 px-3 text-white shadow-xl hover:bg-black/80">Sign Up</NavLink>
             </>
           )
         }
