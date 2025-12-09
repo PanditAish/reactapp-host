@@ -51,8 +51,8 @@ const AdminUsers = () => {
   return (
     <>
        <div className="bg-white p-2 shadow-md rounded-lg">
-       <div className="overflow-x-auto w-full">
-          <table className="min-w-full text-sm text-left border-collapse">
+       <div className="w-full">
+          <table className="min-w-full text-sm text-left border-collapse hidden md:table">
             <thead className="bg-[#6d6d6d] text-sm text-white rounded-md">
               <tr className="rounded-md">
                 <th className="px-6 py-3">Name</th>
@@ -100,6 +100,59 @@ const AdminUsers = () => {
                }
             </tbody>
           </table>
+   
+        {/* mobileresponsve */}
+
+         <div className="md:hidden space-y-4">
+            {users.length > 0 ? (
+              users.map((curUser, index) => {
+                const { _id, username, email, phone } = curUser;
+                return (
+                  <div
+                    key={index}
+                    className="bg-white p-4 rounded-lg shadow border"
+                  >
+                    <p className="mb-1">
+                      <span className="font-semibold">Name: </span>
+                      {username}
+                    </p>
+
+                    <p className="mb-1 break-all">
+                      <span className="font-semibold">Email: </span>
+                      {email}
+                    </p>
+
+                    <p className="mb-1">
+                      <span className="font-semibold">Phone: </span>
+                      {phone}
+                    </p>
+
+                    <div className="flex gap-2 mt-3">
+                      <Link
+                        to={`/admin/users/${_id}/edit`}
+                        className="flex-1"
+                      >
+                        <button className="w-full px-3 py-2 rounded bg-blue-500 text-white text-sm">
+                          Edit
+                        </button>
+                      </Link>
+
+                      <button
+                        onClick={() => deleteUser(_id)}
+                        className="flex-1 px-3 py-2 rounded bg-red-500 text-white text-sm"
+                      >
+                        Delete
+                      </button>
+                    </div>
+                  </div>
+                );
+              })
+            ) : (
+              <p className="text-center text-gray-500">No users found</p>
+            )}
+          </div>
+
+
        </div>
        </div>
     </>

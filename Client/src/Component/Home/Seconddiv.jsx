@@ -13,7 +13,7 @@ const Seconddiv = () => {
           <div className="text-center mb-24 mx-auto">
             <Typography variant="lead" className="text-sm md:text-md mb-3 text-[var(--text-color)] transition-colors">Our Services</Typography>
             <Fade delay={200} duration={1000} fraction={0.5}>
-            <Typography variant="h2" className="font-bold font-handwriting text-xl lg:text-3xl">Services I Provide</Typography>
+            <Typography variant="h2" className="font-bold font-handwriting text-2xl lg:text-3xl">Services I Provide</Typography>
             </Fade>          
           </div>
           {/* card section */}

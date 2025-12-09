@@ -53,8 +53,8 @@ const AdminContacts = () => {
   return (
     <>
      <div className="bg-white p-2 shadow-md rounded-lg">
-       <div className="overflow-x-auto w-full">
-          <table className="min-w-full text-sm text-left border-collapse">
+       <div className="w-full">
+          <table className="min-w-full text-sm text-left border-collapse hidden md:table">
             <thead className="bg-[#6d6d6d] text-sm text-white rounded-md">
               <tr className="rounded-md">
                 <th className="px-6 py-3">Name</th>
@@ -85,6 +85,52 @@ const AdminContacts = () => {
                }
             </tbody>
           </table>
+
+        {/* mobile responsive */}
+
+        <div className="md:hidden space-y-4">
+            {contactData.length > 0 ? (
+              contactData.map((curContact, index) => {
+                const { _id, username, email, message } = curContact;
+
+                return (
+                  <div
+                    key={index}
+                    className="bg-white p-4 rounded-lg shadow border"
+                  >
+                    {/* NAME */}
+                    <p className="mb-1">
+                      <span className="font-semibold">Name: </span>
+                      {username}
+                    </p>
+
+                    {/* EMAIL */}
+                    <p className="mb-1 break-all">
+                      <span className="font-semibold">Email: </span>
+                      {email}
+                    </p>
+
+                    {/* MESSAGE */}
+                    <p className="mb-2 break-words">
+                      <span className="font-semibold">Message: </span>
+                      {message}
+                    </p>
+
+                    {/* DELETE BUTTON */}
+                    <button
+                      onClick={() => deleteContactData(_id)}
+                      className="w-full px-3 py-2 rounded bg-red-500 text-white text-sm hover:bg-red-600"
+                    >
+                      Delete
+                    </button>
+                  </div>
+                );
+              })
+            ) : (
+              <p className="text-center text-gray-500">No contacts found</p>
+            )}
+          </div>
+
        </div>    
     </div>
     </>

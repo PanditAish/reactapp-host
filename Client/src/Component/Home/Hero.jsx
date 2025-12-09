@@ -52,7 +52,7 @@ const Hero = () => {
                     <Slide direction="left" delay={0.2} duration={1000}>
                       <Typography
                         variant="h1"
-                        className="font-bold font-handwriting text-2xl lg:text-3xl xl:text-6xl text-white leading-5"
+                        className="font-bold font-handwriting text-3xl lg:text-4xl xl:text-6xl text-white leading-5"
                       >
                         {activeData.title}
                       </Typography>
@@ -128,7 +128,7 @@ const Hero = () => {
                   exit={{ opacity: 0, x: -100, transition: { duration: 0.4 } }}
                   src={activeData.image}
                   alt={activeData.title}
-                  className="w-[180px] md:w-[480px] img-shadow relative z-10"
+                  className="w-[200px] md:w-[480px] img-shadow relative z-10"
                 />
               </AnimatePresence>
               <AnimatePresence mode="wait">

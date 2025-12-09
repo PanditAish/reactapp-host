@@ -4,7 +4,7 @@ export function Footer() {
   return (
     <footer className="w-full bg-white p-8">
       <div className="lg:px-20 flex flex-row flex-wrap items-center justify-center gap-y-6 gap-x-12 bg-white text-center md:justify-between">
-        <Typography variant="h5" className="mb-6 text-[#cf4f00] font-bold font-handwriting">
+        <Typography as="a" href="/" variant="h4" className="mb-6 text-[#cf4f00] font-bold font-handwriting">
           AishPandit
         </Typography>
         <ul className="flex flex-wrap justify-center items-center gap-y-2 gap-x-8">

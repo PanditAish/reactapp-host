@@ -58,7 +58,7 @@ const Lastdiv = () => {
             <Fade delay={200} duration={1000} fraction={0.5}>
               <Typography
                 variant="h2"
-                className="font-bold font-handwriting text-xl lg:text-3xl"
+                className="font-bold font-handwriting text-2xl lg:text-3xl"
               >
                 Exploring the Tools
               </Typography>
