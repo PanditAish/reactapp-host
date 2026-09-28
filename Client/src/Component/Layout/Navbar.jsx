@@ -15,7 +15,7 @@ const StickyNavbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const { activeData } = useHero();
   
-  const { isLoggedIn } = useAuth();
+  const { isLoggedIn, user } = useAuth();
 
   const textColor = activeData?.bgcolor || "#d70654";
 
