@@ -55,7 +55,17 @@ const StickyNavbar = () => {
         <div className="lg:flex items-center gap-6">
         {
           isLoggedIn ? (
-            <NavLink to="/logout" className="hidden lg:inline-block bg-gradient-to-r from-black/70 to-black/75 rounded-md py-1 px-3 text-white shadow-xl hover:bg-black/80">Logout</NavLink>
+            <>
+              {user?.isAdmin === true && (
+                <NavLink
+                  to="/admin"
+                  className="hidden lg:inline-block bg-gradient-to-r from-black/70 to-black/75 rounded-md py-1 px-3 text-white shadow-xl hover:bg-black/80"
+                >
+                  Admin Panel
+                </NavLink>
+               )}
+              <NavLink to="/logout" className="hidden lg:inline-block bg-gradient-to-r from-black/70 to-black/75 rounded-md py-1 px-3 text-white shadow-xl hover:bg-black/80">Logout</NavLink>
+            </>
           ) :
           (
             <>
